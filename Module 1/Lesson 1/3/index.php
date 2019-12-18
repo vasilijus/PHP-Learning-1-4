@@ -14,4 +14,8 @@ file_put_contents('log.txt',$str . "\n", FILE_APPEND);
 
 // print_r($str);
 
+$dir = scandir('./');
+foreach($dir as $el) {
+    echo "<a href=\"$el\">$el</a><br>";
+}
 ?>

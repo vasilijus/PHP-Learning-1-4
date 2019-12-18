@@ -25,5 +25,12 @@ while( !feof($f) ) { // end of file
 fclose($f);
 
 
+echo("<br>");
+$dir = scandir('./');
+$cd = basename(__DIR__);
+// print_r("dir ".$cd."/");
+foreach($dir as $el) {
 
+    echo "<a href=\"$cd/$as\">$el</a><br>";
+}
 ?>

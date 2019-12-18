@@ -22,4 +22,8 @@ $f = fopen('log.txt', 'a');
 fclose($f);
 // print_r($str);
 
+$dir = scandir('./');
+foreach($dir as $el) {
+    echo "<a href=\"$el\">$el</a><br>";
+}
 ?>

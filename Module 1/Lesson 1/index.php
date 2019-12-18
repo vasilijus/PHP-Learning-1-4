@@ -13,4 +13,8 @@ print("Begin Lesson 1 <br><hr>");
 
 
 
+$dir = scandir('./');
+foreach($dir as $el) {
+    echo "<a href=\"$el\">$el</a><br>";
+}
 ?>
