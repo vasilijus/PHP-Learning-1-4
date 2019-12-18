@@ -8,7 +8,7 @@
     }
     /* TODO: check corectness of the param
                 - Tolko cyfry
-                - (*) sorerzit tolko cyfry , latinskie bukvy i 
+                - (*) sorerzit tolko cyfry , latinskie bukvy i -
     */
     elseif( !file_exists( 'data/'.$fname) ){
         echo "Error 404 , No such news";
