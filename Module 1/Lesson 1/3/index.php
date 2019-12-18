@@ -1,6 +1,6 @@
 <?php
 
-print("Begin Lesson 1 <br><hr> <br>");
+print("Begin Lesson 1 <br><hr> <br>Write to log.txt");
 
 $info = [];
 $info[] = date('Y-m-d H:i:s');
