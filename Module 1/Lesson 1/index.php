@@ -2,17 +2,27 @@
 
 print("Begin Lesson 1 <br><hr>");
 
-$file = fopen('1.txt', 'r');
+/*
+    r   read            |   (error if file not exists)
+    r+  read & write    |
+    w   write           |   (new file is not found)
+    w+  write & read    |
+    a   append          |
+    a+  append          |
+*/
 
-//     $read = fread($file, 2); // put the cursor after second element (Hello => He|llo)
+$f = fopen('1.txt', 'r');
+$part = 2; // 2Mb = 2 * 1024 * 1024 
+
+//     $read = fread($f, 2); // put the cursor after second element (Hello => He|llo)
 //     echo $read;
 
-while( !feof($file) ) {
-    $str = fread($file, 2);
+while( !feof($f) ) { // end of file
+    $str = fread($f, $part);
     echo $str;
 }
 
-fclose($file);
+fclose($f);
 
 
 
