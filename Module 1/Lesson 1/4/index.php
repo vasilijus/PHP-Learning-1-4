@@ -9,3 +9,5 @@ foreach($list as $fname) {
 }
 
 ?>
+<br>
+<a href="add.php">Add</a>
