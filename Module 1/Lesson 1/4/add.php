@@ -6,6 +6,9 @@
         if ($title == ''||$content == ''){
             $msg = 'Fill the fields';
         }
+        /*
+            ! empty field , bad title , if file exists
+        */
         else {
             header("Location: index.php?msg=ok");
             exit();
