@@ -11,6 +11,15 @@ session_start();
 
 <p> Secret zone. </p>
 <?php 
-echo md5('password') . "<br>";
-echo hash('sha256','password') . "<br>";
+/*
+echo "MD5 "  . md5('password') . "<br>";
+echo "Hash " . hash('sha256','password') . "<br>";
+echo "My hash ". my_hash('password') . "<br>";
+
+function my_hash($str) {
+    return hash('sha256','password' . "newHash") . "<br>";
+}
+*/
 ?>
+
+<a href="index.php">Logout</a>
