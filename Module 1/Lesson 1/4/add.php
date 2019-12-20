@@ -5,31 +5,36 @@
     if( count($_POST) > 0 ) {
         $title      = trim( $_POST['title'] );
         $content    = trim( $_POST['content'] );
+
         if ($title == ''||$content == ''){
             $msg = 'Fill the fields';
         }
-        /*
-            ! empty field , bad title , if file exists ,, save newsItem, header
-        */
-        else {
-            if( file_exists($title) ){
-                $msg = "The title is already taken";
-            } else {
-                $f = fopen("data/".$title, 'a');
-                    fwrite($f, $content);
-                fclose();
+        /* ! empty field , bad title , if file exists ,, save newsItem, header  */
+        elseif( file_exists("data/$title") ){
 
-                header("Location: index.php?msg=ok");
-                exit();
-            }
+            $msg = "The title is already taken";
+
+        } else {
+
+            $f = fopen("data/".$title, 'a');
+                fwrite($f, $content);
+            fclose();
+
+            header("Location: index.php?msg=ok");
+            exit();
+
         }
-
+        
+    } else {
+        $msg    = '';
+        $title  = '';
+        $content= '';
     }
 ?>
 
 <form method="post">
-    <input type="text" name="title"><br>
-    <textarea name="content"></textarea>
+    <input type="text" name="title"><?php echo $title; ?><br>
+    <textarea name="content"><?php echo $content; ?></textarea>
     <input type="submit" value="Add">
 </form>
 
