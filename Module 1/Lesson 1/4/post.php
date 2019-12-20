@@ -1,4 +1,7 @@
 <?php
+
+    include_once('functions.php');
+    
     error_reporting();
     // $fname = $_GET['fname']; // NULL if empty
     $fname = $_GET['fname'] ?? null;
