@@ -2,14 +2,10 @@
 
 session_start();
 
-// подключение конфигурационного файла
-include_once 'config.php';
-// подключение функций
+// external functions
 include_once 'functions.php';
-// подключение файла с данными
-include_once 'db.php';
 
-// для хранения информации о юзере
+// user info
 $user = [];
 $user['login'] = '';
 $msg = '';
@@ -21,13 +17,13 @@ if(isset($_POST['authorization'])) {
     // сохраняем пароль
     $user['password'] = trim(htmlspecialchars($_POST['password']));
 
-    // если поля логин и пароль не заполнены сообщить об этом
+    // Notice
     if($user['login'] == '' || $user['password'] == '') {
-        $msg = 'Заполните все поля';
+        $msg = 'Fill all fields';
     }
-    // проверка согласно регулярному выражению на a-zA-Z0-9-
+    // a-zA-Z0-9-
     elseif(checkRegular($user['login'])) {
-        $msg = 'Логин может состоять только из цифр, минуса и букв латинского алфавита!';
+        $msg = 'Login must be letters, numbers and hyphens';
     }
     // если все подходит под требования ищем в БД естьт ли такой пользователь
     else {
@@ -73,7 +69,7 @@ if(isset($_COOKIE['login']) && isset($_COOKIE['password'])) {
     }
 }
 
-// Выход из системы
+// Logout
 if ( (isset($_GET['action'])) && ( ($_GET['action'] == 'logout') ) ) {
     logOut();
 }
