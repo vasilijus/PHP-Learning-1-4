@@ -5,3 +5,6 @@
 2019-12-18 21:52:41-@_@-127.0.0.1-@_@-/Lesson%201/2-@_@-Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0
 2019-12-18 21:52:47-@_@-127.0.0.1-@_@-/Lesson%201/2-@_@-Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0
 2019-12-20 12:53:43-@_@-127.0.0.1-@_@-/2-@_@-Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/79.0.3945.79 Chrome/79.0.3945.79 Safari/537.36
+2020-04-20 23:35:42-@_@-127.0.0.1-@_@-/2-@_@-Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0
+2020-04-20 23:35:48-@_@-127.0.0.1-@_@-/2-@_@-Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0
+2020-04-20 23:35:51-@_@-127.0.0.1-@_@-/2-@_@-Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0
