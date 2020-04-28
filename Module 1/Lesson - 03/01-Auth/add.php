@@ -29,6 +29,10 @@ if(isset($_POST['addArticle'])) {
     }
         // если все нрмально
     else {
+        // check if dir exists
+        if( !is_dir($dataDir) ) {
+            mkdir($dataDir);
+        }
         // save to file
         file_put_contents( "$dataDir/$title", $content, FILE_APPEND );
         // redirect home
@@ -55,11 +59,11 @@ else {
 <body>
     
     <form method="post">
-        Название<br>
+        Name<br>
         <input type="text" name="title" value="<?php echo $title?>"> <br>
-        Контент<br>
+        Content<br>
         <textarea name="content"><?php echo $content?></textarea><br>
-        <input type="submit" value="Добавить" name="addArticle">
+        <input type="submit" value="Add-article" name="addArticle">
     </form>
     <?php echo $message; ?>
 
