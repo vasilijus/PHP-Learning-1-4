@@ -16,9 +16,29 @@ if(isset($_POST['addArticle'])) {
     $content    = trim( htmlspecialchars($_POST['content'] ));
     $title      = trim( htmlspecialchars($_POST['title'] ));
         // если поля пустые информируем
-    if() {
-
+    if( $title == '' || $content = '' ) {
+        $message = 'Fill in the fields';
+    }
+        // если не соответствует название требованиям информируем
+    elseif( checkRegularExp($title) ) {
+        $message = 'Only numbers , minus or letters';
+    }
+        // если статья уже с таким именем есть информируем
+    elseif( file_exists("$dataDir/$title") ) {
+        $message = 'Name taken.';
+    }
+        // если все нрмально
+    else {
+        // save to file
+        file_put_contents( "$dataDir/$title", $content, FILE_APPEND );
+        // redirect home
+        header("Location: index.php");
+        // exit
+        exit();
     }
 }
 
+else {
+    $message = '';
+}
 ?>
