@@ -29,10 +29,6 @@ if(isset($_POST['addArticle'])) {
     }
         // если все нрмально
     else {
-        // check if dir exists
-        if( !is_dir($dataDir) ) {
-            mkdir($dataDir);
-        }
         // save to file
         file_put_contents( "$dataDir/$title", $content, FILE_APPEND );
         // redirect home
